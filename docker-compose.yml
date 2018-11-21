@@ -6,11 +6,3 @@ services:
     build: .
     ports:
       - '80:3000'
-  #   links:
-  #     - mongo
-  # mongo:
-  #   container_name: mongo
-  #   image: mongo
-  #   ports:
-  #     - '27017:27017'
-  # docker exec -it docker-node-mongo echo "Hello from container"

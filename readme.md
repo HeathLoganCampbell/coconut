@@ -9,7 +9,8 @@ This is a discord bot that you can easily add plugins to
 
 I know it looks like there is a lot going on here, but I swear it's simple!
 
-
+You'll need a token from 
+ https://discordapp.com/developers/applications/
 
 how to run
 whats docker
@@ -28,3 +29,5 @@ runs app without locking terminal
 Deletes the container
 
 docker exec -i -t coconut /bin/bash
+
+ docker-compose build
