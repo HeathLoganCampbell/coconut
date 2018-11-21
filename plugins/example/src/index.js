@@ -4,12 +4,12 @@ module.exports = class Example extends DiscordPlugin
 {
 	onEnable()
 	{
-		console.log("Enabled");
+		this.log("Enabled");
 	}
 
 	onDisable()
 	{
-		console.log("Disabled");
+		this.log("Disabled");
 	}
 };
 

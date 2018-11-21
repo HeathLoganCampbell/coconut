@@ -2,8 +2,9 @@
 //Do not delete this file
 module.exports = class DiscordPlugin
 {
-	constructor(discordHandler)
+	constructor(pluginDesc, discordHandler)
 	{
+		this.pluginDesc = pluginDesc;
 		this.discordHandler = discordHandler;
 	}
 
@@ -23,5 +24,15 @@ module.exports = class DiscordPlugin
 	removeCommand()
 	{
 
+	}
+
+	get name()
+	{
+		return this.pluginDesc.name;
+	}
+
+	log(message)
+	{
+		console.log(this.name + " > " + message);
 	}
 };
