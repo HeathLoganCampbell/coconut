@@ -5,4 +5,9 @@ module.exports = class CommandBase
 		this.command = command;
         
 	}
+
+	onExecute(channel, sender, command, args)
+	{
+
+	}
 };
