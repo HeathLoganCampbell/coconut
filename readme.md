@@ -31,3 +31,6 @@ Deletes the container
 docker exec -i -t coconut /bin/bash
 
  docker-compose build
+
+
+https://discordapp.com/oauth2/authorize?&client_id=514783790606843905&scope=bot&permissions=3072

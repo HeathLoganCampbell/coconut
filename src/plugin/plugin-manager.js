@@ -3,9 +3,9 @@ const fs = require("fs");
 
 module.exports = class PluginManager 
 {
-	constructor()
+	constructor(main)
 	{
-        
+		this.main = main;
 	}
     
 	loadAllPlugins()
@@ -28,7 +28,7 @@ module.exports = class PluginManager
 	{
 		var pluginDesc = require("../../plugins/" + name + "/plugin.json");
 		var Plugin = require("../../plugins/" + name + "/" + pluginDesc.entry);
-		var plugin = new Plugin(pluginDesc, null);
+		var plugin = new Plugin(pluginDesc, this.main);
 		plugin.log(plugin.name + " has been enabled.");
 		plugin.onEnable();
 	}
