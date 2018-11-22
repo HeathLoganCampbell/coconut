@@ -12,7 +12,7 @@ const PluginManager = require("./plugin/plugin-manager.js");
 const CommandHandler = require("./command/command-handler.js");
 const CommandMap = require("./command/command-map.js");
 // ===================================================== 
-
+// ===
 const discordClient = new Discord.Client();
 
 discordClient.on("ready", () => {
