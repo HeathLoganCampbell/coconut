@@ -58,3 +58,35 @@ rebuilds the application
 
 ## What is Docker
 Docker is just makes it easier to share programs across muliple different types of platforms, so to minimize the "idk, It works on my machine" issue 
+
+## Make a custom plugin
+So in this application you can easily make plugins to add commands to the bot.
+
+1. Create a folder inside of the plugins folder
+1. inside that folder create a plugin.json
+    1. ```{
+    "name": "example",
+    "author": "Heath Logan Campbell",
+    "entry": "index.js"
+}```
+    1. This contains the name if the plugin
+    1. the author of the plugin
+    1. and the entry point of the plugin aka where your main file is.
+    1. NOTE: Make sure your entry does not start with './' or '/'
+1.  within the same folder create 'index.js' as we stated in the 'plugin.json' within the entry
+1.  ```const { DiscordPlugin } = require("../../discord-plugin.js");
+
+module.exports = class ClassManager extends DiscordPlugin
+{
+	onEnable()
+	{
+		this.log("Enabled");
+	}
+
+	onDisable()
+	{
+		this.log("Disabled");
+	}
+};
+```
+    1. The entry file *must* require ```const { DiscordPlugin } = require("../../discord-plugin.js");``` so that it can be extended
