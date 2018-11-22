@@ -27,4 +27,4 @@ pluginManager.loadAllPlugins();
 
 commandHandler.addCommandMap(commandMap);
 
-discordClient.login("NTE0NzgzNzkwNjA2ODQzOTA1.Dteiyg.mI0HfwKMaX3CSAJYhGgq-QODqCU");
+discordClient.login(configs.discordToken);
