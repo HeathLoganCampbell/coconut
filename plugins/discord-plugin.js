@@ -1,6 +1,7 @@
 //Interface class
 //Do not delete this file
-module.exports = class DiscordPlugin
+
+class DiscordPlugin
 {
 	constructor(pluginDesc, main)
 	{
@@ -35,6 +36,10 @@ module.exports = class DiscordPlugin
 	{
 		console.log(this.name + " > " + message);
 	}
+}
 
-	
+module.exports =
+{
+	CommandBase: require("../src/command/command-base.js"),
+	DiscordPlugin: DiscordPlugin
 };

@@ -17,7 +17,6 @@ module.exports = class CommandMap
 		command = command.toLowerCase();
 		if(this.commands[command] === undefined) 
 			return false;
-		console.log("Command ran");
 		this.onExecute(sender, command, args);
 		return true;
 	}
