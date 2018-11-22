@@ -95,5 +95,5 @@ module.exports = class ClassManager extends DiscordPlugin
 	}
 };
 ```
-    1. The entry file *must* require ```javascript
+The entry file *must* require ```javascript
     const { DiscordPlugin } = require("../../discord-plugin.js");``` so that it can be extended
