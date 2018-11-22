@@ -1,23 +1,45 @@
-### Coconut
-## A simple modular discord bot
+# Coconut
+A simple modular discord bot which makes making commands for discord easier to use and understand.
 
-This is a discord bot that you can easily add plugins to
+## configurations
+to make this all work, you'll need a discord token which you can get by...
+* Going to the [Discord Developer Portal](https://discordapp.com/developers/applications/)
+* Click 'Create an application'
+* On the left bar, click OAuth2
+* Scrolldown and select 'bot'
+* Scrolldown a bit more, there should be a permissions panel now, select 'administrator', so the bot has all powers
+* Now Go back to the left bar, click on Bot
+* Click 'Add bot'
+* Now click 'copy' under where it says 'token'
+* Scrolldown to the permission panel and select 'administrator'
+* Now go back to this project and enter in your token into the 'resources/configs.json' file
 
-### How to run it
+Now you'll need to get the client Id, so that your bot can join the server
+* Going to the [Discord Developer Portal](https://discordapp.com/developers/applications/)
+* Click on the application you just created 
+* go to 'General Information'
+* It should say 'CLIENT ID' on the page, just click the 'copy' button under it
+* Now replace CLIENTIDGOESHERE with that client id https://discordapp.com/oauth2/authorize?client_id=CLIENTIDGOESHERE&scope=bot&permissions=3072
+* paste that url into your browser and add the bot to your server
 
 
+## How to run it
 
-I know it looks like there is a lot going on here, but I swear it's simple!
+### Locally
 
-You'll need a token from 
- https://discordapp.com/developers/applications/
+1. I would suggest you [download docker](https://www.docker.com/get-started), which just make it so everything is ran in the same environment 
+1. Type ```git clone https://github.com/HeathLoganCampbell/coconut.git``` into terminal to download the repo
+1. Type ```cd coconut``` to enter the folder
+1. Type ```docker-compose up``` to run the application
 
-how to run
-whats docker
-install
-    remotely
-    locally
+### Remotely
 
+1. To run it remotely, you'll need to install [docker](https://www.docker.com/get-started) into the machine which there should be a few tutorials online that use it with your host
+1. Type ```git clone https://github.com/HeathLoganCampbell/coconut.git``` into terminal to download the repo
+1. Type ```cd coconut``` to enter the folder
+1. Type ```docker-compose up -d``` to run the application
+
+## Important commands
 
 ``` docker-compose up ```
 runs the app
@@ -26,11 +48,13 @@ runs the app
 runs app without locking terminal
 
 ``` docker-compose down ```
-Deletes the container
+Deletes the container aka deletes the application
 
-docker exec -i -t coconut /bin/bash
+```docker exec -i -t coconut /bin/bash```
+look into the container
 
- docker-compose build
+```docker-compose build```
+rebuilds the application 
 
-
-https://discordapp.com/oauth2/authorize?&client_id=514783790606843905&scope=bot&permissions=3072
+## What is Docker
+Docker is just makes it easier to share programs across muliple different types of platforms, so to minimize the "idk, It works on my machine" issue 
