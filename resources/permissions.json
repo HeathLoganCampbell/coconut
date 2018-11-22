@@ -1,0 +1,14 @@
+{
+    "roles":
+    {
+        "@everyone": [
+            "basic.command.ping"
+        ]
+    },
+    "users":
+    {
+        "HeathLoganCampbell#9856": [
+            "*"
+        ]
+    }
+}

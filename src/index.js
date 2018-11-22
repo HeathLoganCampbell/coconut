@@ -4,6 +4,7 @@ const { getResource } = require("./resource-manager.js");
 
 //Configs
 const configs = getResource("configs.json");
+const permissionMap = getResource("permissions.json");
 
 //Classes
 const Discord = require("discord.js");
