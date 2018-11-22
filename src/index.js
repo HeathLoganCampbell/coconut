@@ -19,7 +19,7 @@ discordClient.on("ready", () => {
 	console.log(`Logged in as ${discordClient.user.tag}!`);
 });
 
-var pluginManager = new PluginManager();
+var pluginManager = new PluginManager(this);
 pluginManager.loadAllPlugins();
 
 var commandHandler = new CommandHandler(discordClient);
