@@ -78,7 +78,8 @@ So in this application you can easily make plugins to add commands to the bot.
 	* and the entry point of the plugin aka where your main file is.
 	* NOTE: Make sure your entry does not start with './' or '/'
 1.  within the same folder create 'index.js' as we stated in the 'plugin.json' within the entry
-1.  ```javascript
+index.js
+```javascript
 const { DiscordPlugin } = require("../../discord-plugin.js");
 
 module.exports = class ClassManager extends DiscordPlugin
